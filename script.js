@@ -61,18 +61,18 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
+
+//saziņa un reCAPTCHA
 window.onload = function() { 
-  // Callback function to hide the error message when CAPTCHA is verified
   window.captchaVerified = function() {
       document.getElementById('captcha-error').style.display = 'none';
   };
 
-  // Show error if CAPTCHA is not verified on form submission
   document.getElementById('contact-form').addEventListener('submit', function(event) {
       const responseField = document.getElementById('g-recaptcha-response');
       if (responseField && responseField.value === "") {
           document.getElementById('captcha-error').style.display = 'inline-block';
-          event.preventDefault(); // Novērš lapas nosūtīšanu
+          event.preventDefault();
       }
   });
 };

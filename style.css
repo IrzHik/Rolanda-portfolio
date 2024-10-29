@@ -111,37 +111,6 @@ header {
     transform: translateY(-5px);
 }
 
-.histogram {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 300px;
-}
-
-.point-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.point {
-    width: 30px;
-    height: 30px;
-    border: 5px solid #3498db;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.connecting-line {
-    position: absolute;
-    width: 5px;
-    background-color: #3498db;
-    left: 13px;
-    top: 37px; 
-    height: 79px; 
-}
-
 .image-placeholder {
     width: 100px;
     height: 100px;
@@ -168,6 +137,13 @@ header {
     color: #555;
     margin: 0;
 }
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    min-width: 100px;
+    min-height: 100px;
+  }
 
 .projects-container {
     display: flex;
@@ -198,8 +174,6 @@ header {
     border-radius: 5px;
 }
 
-
-/* Contact Form Styling */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -234,27 +208,21 @@ header {
     background-color: #36a74a;
 }
 
-/* Pielāgo CAPTCHA novietojumu */
 .g-recaptcha {
-    margin: 10px 0; /* Atstājiet atstarpi virs un zem CAPTCHA */
+    margin: 10px 0;
 }
 
-/* Ja nepieciešams, varat pievienot stilu, lai formu centrētu */
 .contact-form {
     display: flex;
-    flex-direction: column; /* Iestatiet uz kolonnu, lai elementi būtu viens virs otra */
-    align-items: flex-start; /* Iestatiet elementus pa kreisi */
+    flex-direction: column;
+    align-items: flex-start; 
 }
-
 
 .error-message {
-    color: red; /* Kļūdas ziņojuma krāsa */
-    display: none; /* Sākumā slēpj ziņojumu */
-    margin-top: 10px; /* Attālums no citiem elementiem */
+    color: red;
+    display: none;
+    margin-top: 10px;
 }
-
-
-
 
 footer {
     text-align: center;
