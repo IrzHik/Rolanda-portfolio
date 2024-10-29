@@ -60,3 +60,21 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
   observer.observe(section);
 });
+
+window.onload = function() { 
+  const submitBtn = document.getElementById('submit-btn');
+  submitBtn.disabled = true;
+
+  window.captchaVerified = function() {
+      submitBtn.disabled = false;
+      document.getElementById('captcha-error').style.display = 'none';
+  };
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      if (submitBtn.disabled) {
+          document.getElementById('captcha-error').style.display = 'block';
+          event.preventDefault();
+      }
+  });
+};
+

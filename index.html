@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rolanda portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <header id="home">
@@ -158,12 +159,16 @@
   <section id="contact" class="section">
     <h2>Nosūti man ziņu!</h2>
     <br>
-    <form action="#" method="POST" class="contact-form">
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Sūtīt ziņu</button>
+    <form id="contact-form" action="https://formspree.io/f/xldegyyv" method="post" class="contact-form">
+        <input type="email" name="email" placeholder="email@example.com" required />
+        <textarea rows="5" cols="60" name="message" placeholder="Enter text" autocomplete="off" required></textarea>
+        <div class="g-recaptcha" data-sitekey="6LeC5m8qAAAAAMg8g8NPl4cogRtOzrkeyaYsxabJ" data-callback="captchaVerified"></div>
+        <p id="captcha-error" class="error-message">Please verify the CAPTCHA to submit.</p>
+        <input type="submit" id="submit-btn" value="Submit">
     </form>
-  </section>
+</section>
+
+
 
 
   <footer>
