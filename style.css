@@ -199,6 +199,7 @@ header {
 }
 
 
+/* Contact Form Styling */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -229,31 +230,30 @@ header {
     transition: background 0.3s;
 }
 
-.contact-form input[type="submit"]:disabled {
-    background-color: #888;
-    cursor: not-allowed;
-}
-
-.contact-form input[type="submit"]:hover:not(:disabled) {
+.contact-form input[type="submit"]:hover {
     background-color: #36a74a;
 }
 
+/* Pielāgo CAPTCHA novietojumu */
+.g-recaptcha {
+    margin: 10px 0; /* Atstājiet atstarpi virs un zem CAPTCHA */
+}
+
+/* Ja nepieciešams, varat pievienot stilu, lai formu centrētu */
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Iestatiet uz kolonnu, lai elementi būtu viens virs otra */
+    align-items: flex-start; /* Iestatiet elementus pa kreisi */
+}
+
+
 .error-message {
-    color: red;
-    font-size: 0.9em;
-    display: none;
-    text-align: center;
-    margin-top: -5px;
+    color: red; /* Kļūdas ziņojuma krāsa */
+    display: none; /* Sākumā slēpj ziņojumu */
+    margin-top: 10px; /* Attālums no citiem elementiem */
 }
 
 
-#g-recaptcha-response {
-    display: block !important;
-    position: absolute;
-    margin: -50px 0 0 0 !important;
-    z-index: -999999;
-    opacity: 0;
-}
 
 
 footer {

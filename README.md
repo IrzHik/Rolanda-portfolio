@@ -16,5 +16,3 @@ Izmantotās programmēšanas valodas:
     -HTML;
     -JS;
     -CSS.
-
-    Tests

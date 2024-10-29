@@ -62,19 +62,17 @@ sections.forEach(section => {
 });
 
 window.onload = function() { 
-  const submitBtn = document.getElementById('submit-btn');
-  submitBtn.disabled = true;
-
+  // Callback function to hide the error message when CAPTCHA is verified
   window.captchaVerified = function() {
-      submitBtn.disabled = false;
       document.getElementById('captcha-error').style.display = 'none';
   };
 
+  // Show error if CAPTCHA is not verified on form submission
   document.getElementById('contact-form').addEventListener('submit', function(event) {
-      if (submitBtn.disabled) {
-          document.getElementById('captcha-error').style.display = 'block';
-          event.preventDefault();
+      const responseField = document.getElementById('g-recaptcha-response');
+      if (responseField && responseField.value === "") {
+          document.getElementById('captcha-error').style.display = 'inline-block';
+          event.preventDefault(); // Novērš lapas nosūtīšanu
       }
   });
 };
-
